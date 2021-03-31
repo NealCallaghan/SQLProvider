@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>9.0</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.8.0" PrivateAssets="all" />
+        
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Generator dependencies -->
+        <PackageReference Include="System.Data.SqlClient" Version="4.8.2" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="netstandard-System.Data.Linq" Version="1.0.1" GeneratePathProperty="true" PrivateAssets="all" />
+        <!--<PackageReference Include="Func" Version="0.2.2" GeneratePathProperty="true" PrivateAssets="all" />-->
+    </ItemGroup>
+
+    <PropertyGroup>
+        <GetTargetPathDependsOn>$(GetTargetPathDependsOn);GetDependencyTargetPaths</GetTargetPathDependsOn>
+    </PropertyGroup>
+
+    <Target Name="GetDependencyTargetPaths">
+        <ItemGroup>
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGSystem_Data_SqlClient)\lib\net461\System.Data.SqlClient.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGnetstandard-System_Data_Linq)\lib\net461\Mindbox.Data.Linq.dll" IncludeRuntimeDependency="false" />
+            <!--<TargetPathWithTargetPlatformMoniker Include="C:\Users\Neal Callaghan\.nuget\packages\func\0.2.2\lib\net45\Func.dll" IncludeRuntimeDependency="false" />-->
+            <!--<TargetPathWithTargetPlatformMoniker Include="$(PKGfunc)\lib\net45\Func.dll" IncludeRuntimeDependency="false" />-->
+        </ItemGroup>
+    </Target>
+
+</Project>

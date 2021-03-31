@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Data.Sql", "CSharp.Data.Sql\CSharp.Data.Sql.csproj", "{4A001CFA-416F-4AA0-A198-9A7F258A3647}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{29980515-B99E-4A69-86B4-10546276C97C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Data.Sql.Tests", "CSharp.Data.Sql.Tests\CSharp.Data.Sql.Tests.csproj", "{2DF20327-F783-4015-A1BE-A7BDF6EEBAD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A001CFA-416F-4AA0-A198-9A7F258A3647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A001CFA-416F-4AA0-A198-9A7F258A3647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A001CFA-416F-4AA0-A198-9A7F258A3647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A001CFA-416F-4AA0-A198-9A7F258A3647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DF20327-F783-4015-A1BE-A7BDF6EEBAD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF20327-F783-4015-A1BE-A7BDF6EEBAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DF20327-F783-4015-A1BE-A7BDF6EEBAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DF20327-F783-4015-A1BE-A7BDF6EEBAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2DF20327-F783-4015-A1BE-A7BDF6EEBAD6} = {29980515-B99E-4A69-86B4-10546276C97C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5092A092-BA3F-429F-ADFA-CF6300CF2977}
+	EndGlobalSection
+EndGlobal
