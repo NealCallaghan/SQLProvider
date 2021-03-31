@@ -1,6 +1,6 @@
 # SQLProvider
 
-This is project is a work in progress.
+This project is a work in progress.
 
 ## Using SQLProvider
 SQLProvider generates classes that depend upon `netstandard-System.Data.Linq` which is a package for dot net core that is an unofficial port of Linq-To-Sql for core.
