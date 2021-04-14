@@ -39,4 +39,4 @@ public partial class MyNewProvider : SqlDataProvider
 The connection string for the moment must be hard coded, however when using the generated code a new constructor allows you pass in a run time connection string which can come from anywhere.
 
 ## Limitations
-At the moment only windows and SQLServer is supported.
+At the moment only windows and SQLServer is supported. more to come
