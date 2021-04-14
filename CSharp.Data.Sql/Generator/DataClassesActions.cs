@@ -16,6 +16,8 @@
     using static Schema.TableUtilities;
     using static Common.SqlDataProviderUtilities;
 
+    using static NamespaceWrapper;
+
     public static class DataClassesActions
     {
         private static readonly Dictionary<DatabaseType, Func<string, Task<Result<IReadOnlyCollection<Table>>>>> GetTablesFacDictionary
@@ -57,7 +59,7 @@
                 {
                     var dataTableText = ProvideDataClassTextFromTable(table);
 
-                    var classWithNameSpace = GetClassWithNameSpace(dataTableText);
+                    var classWithNameSpace = WrapInNameSpace(dataTableText);
 
                     context.AddSource($"{table.TableName}.cs", SourceText.From(classWithNameSpace, Encoding.UTF8));
                 }
@@ -81,11 +83,5 @@
                     $"{syntaxError.ErrorMessage}",
                     "Syntax Error", DiagnosticSeverity.Error, true)
                 .Tee(diagnostic => context.ReportDiagnostic(Diagnostic.Create(diagnostic, Location.None)));
-
-        private static string GetClassWithNameSpace(string classCode) =>
-            $@"namespace CSharp.Data.Sql
-{{
-    {classCode}
-}}";
     }
 }
